@@ -1,0 +1,33 @@
+﻿1.1
+SELECT *
+FROM `hw1`.`products`
+
+
+1.2
+SELECT `name`, `phone`
+FROM `hw1`.`shippers`
+
+
+2.
+SELECT AVG(`price`), MAX(`price`), MIN(`price`)
+FROM `hw1`.`products`;
+
+
+3.
+SELECT DISTINCT `category_id`, `price` 
+FROM `hw1`.`products` 
+ORDER BY `price` DESC 
+LIMIT 10;
+
+
+4.
+SELECT COUNT(*) AS product_count 
+FROM `hw1`.`products` 
+WHERE `price` 
+BETWEEN 20 AND 100;
+
+
+5.
+SELECT supplier_id, COUNT(`name`) AS product_count, avg(`price`) as avarage_price
+FROM `hw1`.`products`
+group by `supplier_id`
